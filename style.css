@@ -1,0 +1,100 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+}
+
+.panel select,
+.panel button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.character {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+.character.dead {
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+.states {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.state {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.state:last-child {
+    margin-bottom: 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border: 1px solid #999;
+}
+
+.actions button:hover:not(:disabled) {
+    background-color: #d0d0d0;
+}
+
+.actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.alert {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+}

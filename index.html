@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лунис — Персонаж с приватными статами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="start-screen" class="panel">
+        <h2>Выбор персонажа</h2>
+        <select id="char-select">
+            <option value="lunis">Лунис (Обычный)</option>
+            <option value="kai">Kai Angel (Сложный)</option>
+        </select>
+        <button id="btn-start">Запустить игру</button>
+    </div>
+
+    <div id="game-ui" style="display: none;" class="game-container">
+        <img class="character" id="char-img" src="nekodevochka.png" alt="character">
+        <div class="states">
+            <div class="state" id="water">
+                <div class="name">Вода</div>
+                <span class="count"></span>
+            </div>
+            <div class="state" id="food">
+                <div class="name">Еда</div>
+                <span class="count"></span>
+            </div>
+            <div class="state" id="energy">
+                <div class="name">Энергия</div>
+                <span class="count"></span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="btn-water">Пить (вода)</button>
+            <button id="btn-food">Есть (еда)</button>
+            <button id="btn-rest">Отдохнуть (энергия)</button>
+        </div>
+
+        <div class="alert" style="display: none;">Ваш персонаж погиб!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
